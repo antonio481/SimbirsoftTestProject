@@ -43,7 +43,7 @@ public class ProfilePage {
     public void inputRecipientField() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(recipientField));
-        recipientField.sendKeys("noreply@github.com");
+        recipientField.sendKeys("farit.valiahmetov@simbirsoft.com");
     }
 
     public void clickWriteButton() {
