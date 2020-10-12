@@ -34,10 +34,10 @@ public class LoginTest {
         loginPage.inputPasswd(ConfProperties.getProperty("password"));
         loginPage.clickNextBtn();
         profilePage.clickWriteButton();
-        profilePage.inputRecipientField();
+        profilePage.inputRecipientField("farit.valiahmetov@simbirsoft.com");
         profilePage.inputTextLetter();
-        profilePage.inputTextTopicLetter(ConfProperties.getProperty("surname"));
-        profilePage.clickSendingBtn();
-        profilePage.getSendingMessage();
+        profilePage.inputTextTopicLetter(ConfProperties.getProperty("surname"),"Тестовое задание. ");
+        //profilePage.clickSendingBtn();
+        //profilePage.getSendingMessage();
     }
 }

@@ -40,10 +40,10 @@ public class ProfilePage {
     @FindBy(id = ":9k")
     private WebElement recipientField;
 
-    public void inputRecipientField() {
+    public void inputRecipientField(String email) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(recipientField));
-        recipientField.sendKeys("farit.valiahmetov@simbirsoft.com");
+        recipientField.sendKeys(email);
     }
 
     public void clickWriteButton() {
@@ -61,8 +61,8 @@ public class ProfilePage {
         textLetterField.sendKeys(String.valueOf(getCountLetters()));
     }
 
-    public void inputTextTopicLetter(String surname) {
-        textTopicField.sendKeys("Тестовое задание. " + surname);
+    public void inputTextTopicLetter(String surname, String otherText) {
+        textTopicField.sendKeys(otherText + surname);
     }
 
     public void clickSendingBtn() {
