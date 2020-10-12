@@ -19,7 +19,7 @@ public class LoginTest {
     public static void setup() throws MalformedURLException {
         ChromeOptions capability = new ChromeOptions();
         driver = new RemoteWebDriver(
-                new URL("http://192.168.2.59:5566/wd/hub"), capability);
+                new URL("http://localhost:5566/wd/hub"), capability);
         loginPage = new LoginPage(driver);
         profilePage = new ProfilePage(driver);
         driver.manage().window().maximize();
