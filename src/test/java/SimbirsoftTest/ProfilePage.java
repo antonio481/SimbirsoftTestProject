@@ -61,7 +61,7 @@ public class ProfilePage {
     {
         textLetterField.sendKeys(String.valueOf(getCountLetters()));
     }
-
+    @Step
     public void inputTextTopicLetter(String surname, String otherText) {
         textTopicField.sendKeys(otherText + surname);
     }
