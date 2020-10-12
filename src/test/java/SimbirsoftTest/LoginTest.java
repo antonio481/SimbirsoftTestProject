@@ -37,7 +37,7 @@ public class LoginTest {
         profilePage.inputRecipientField("farit.valiahmetov@simbirsoft.com");
         profilePage.inputTextLetter();
         profilePage.inputTextTopicLetter(ConfProperties.getProperty("surname"),"Тестовое задание. ");
-        //profilePage.clickSendingBtn();
-        //profilePage.getSendingMessage();
+        profilePage.clickSendingBtn();
+        profilePage.getSendingMessage();
     }
 }
