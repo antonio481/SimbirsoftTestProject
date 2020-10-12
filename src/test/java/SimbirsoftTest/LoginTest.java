@@ -1,5 +1,6 @@
 package SimbirsoftTest;
 
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -37,7 +38,11 @@ public class LoginTest {
         profilePage.inputRecipientField("farit.valiahmetov@simbirsoft.com");
         profilePage.inputTextLetter();
         profilePage.inputTextTopicLetter(ConfProperties.getProperty("surname"),"Тестовое задание. ");
-        profilePage.clickSendingBtn();
-        profilePage.waitSendingMessage();
+        //profilePage.clickSendingBtn();
+        //profilePage.waitSendingMessage();
+    }
+    @AfterClass
+    public static void tearDown() {
+        driver.quit();
     }
 }
