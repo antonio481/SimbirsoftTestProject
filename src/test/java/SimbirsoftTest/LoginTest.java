@@ -38,6 +38,6 @@ public class LoginTest {
         profilePage.inputTextLetter();
         profilePage.inputTextTopicLetter(ConfProperties.getProperty("surname"),"Тестовое задание. ");
         profilePage.clickSendingBtn();
-        profilePage.getSendingMessage();
+        profilePage.waitSendingMessage();
     }
 }

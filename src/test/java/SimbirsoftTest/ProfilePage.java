@@ -69,7 +69,7 @@ public class ProfilePage {
         sendingBtn.click();
     }
 
-    public void getSendingMessage() {
+    public void waitSendingMessage() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(messageAboutSending));
     }
