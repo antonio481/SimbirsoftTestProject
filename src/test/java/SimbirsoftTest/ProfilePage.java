@@ -1,5 +1,6 @@
 package SimbirsoftTest;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,23 +40,23 @@ public class ProfilePage {
 
     @FindBy(id = ":9k")
     private WebElement recipientField;
-
+    @Step
     public void inputRecipientField(String email) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(recipientField));
         recipientField.sendKeys(email);
     }
-
+    @Step
     public void clickWriteButton() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(writeButton));
         writeButton.click();
     }
-
+    @Step
     public int getCountLetters() {
         return letters.size();
     }
-
+    @Step
     public void inputTextLetter()
     {
         textLetterField.sendKeys(String.valueOf(getCountLetters()));
@@ -64,11 +65,11 @@ public class ProfilePage {
     public void inputTextTopicLetter(String surname, String otherText) {
         textTopicField.sendKeys(otherText + surname);
     }
-
+    @Step
     public void clickSendingBtn() {
         sendingBtn.click();
     }
-
+    @Step
     public void waitSendingMessage() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(messageAboutSending));

@@ -1,5 +1,7 @@
 package SimbirsoftTest;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -28,6 +30,7 @@ public class LoginTest {
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
+@Description(value = "Тест проверяет логин/ввод отправку письма")
     @Test
     public void loginTest() {
         loginPage.inputLogin(ConfProperties.getProperty("login"));
@@ -38,8 +41,8 @@ public class LoginTest {
         profilePage.inputRecipientField("farit.valiahmetov@simbirsoft.com");
         profilePage.inputTextLetter();
         profilePage.inputTextTopicLetter(ConfProperties.getProperty("surname"),"Тестовое задание. ");
-        //profilePage.clickSendingBtn();
-        //profilePage.waitSendingMessage();
+        profilePage.clickSendingBtn();
+        profilePage.waitSendingMessage();
     }
     @AfterClass
     public static void tearDown() {
